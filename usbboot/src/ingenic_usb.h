@@ -65,6 +65,9 @@ struct ingenic_dev {
 	unsigned int file_len;
 };
 
+int usb_ingenic_start(struct ingenic_dev *ingenic_dev, int cmd, int addr);
+int usb_ingenic_sdram_ops(struct ingenic_dev *ingenic_dev, struct sdram_in *sdram_in);
+
 int usb_ingenic_init(struct ingenic_dev *ingenic_dev);
 int usb_get_ingenic_cpu(struct ingenic_dev *ingenic_dev);
 int usb_ingenic_upload(struct ingenic_dev *ingenic_dev, int stage);
